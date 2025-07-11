@@ -187,6 +187,9 @@ export default function Home() {
               </TouchableOpacity>
 
               <Text style={homeStyles.eventTitle}>{item.title}</Text>
+              {item.description && (
+              <Text style={homeStyles.eventDescription}>{item.description}</Text>
+              )}
               <Text>{new Date(item.datetime).toLocaleString()}</Text>
 
               {item.location?.latitude && item.location?.longitude && (
